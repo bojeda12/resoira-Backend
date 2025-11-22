@@ -1,0 +1,23 @@
+para ejecutar las dependencias correspondiendtes que estan dentro de requirements hacer lo siguiente:
+paso1
+Comprueba que tienes python instalado
+py --version
+
+paso2
+en caso de que no este instalado hay que instlarlo
+
+paso 3
+una ves instalado checar actualizaciones 
+
+py -m pip install --upgrade pip
+
+paso 4 
+
+en la carpeta de backend abrir una terminal e instalar lo que esta dentro de requirements con el comando siguiente:
+
+py -m pip install -r requirements.txt
+
+paso 5 
+corremos el servidor con el comando siguiente:
+
+py -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
