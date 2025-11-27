@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import List
 
-# DTO que recibes desde Android (Room → Retrofit → Backend)
+# DTO que se recibe desde Android (Room → Retrofit → Backend)
 class SesionDTO(BaseModel):
     usuarioId: int
     rutinaId: int

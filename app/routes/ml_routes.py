@@ -13,8 +13,16 @@ def predecir(sesiones: List[SesionDTO]):
     calcula los mejores horarios y devuelve la respuesta.
     """
     try:
-        mejores = calcular_horarios(sesiones)
-        return HorarioResponse(mejores_horarios=mejores)
+        # Si aún no hay suficientes datos, devolvemos un mensaje motivador
+        if len(sesiones) < 5:
+            return HorarioResponse(
+                mejores_horarios=[],
+                error="Estamos aprendiendo de ti. Registra cómo te sientes y realiza al menos una sesión diaria."
+            )
+
+        horarios = calcular_horarios(sesiones)
+        return HorarioResponse(mejores_horarios=horarios)
+
     except Exception as e:
         return HorarioResponse(mejores_horarios=[], error=str(e))
 

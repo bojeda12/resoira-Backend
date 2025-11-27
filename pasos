@@ -20,4 +20,6 @@ py -m pip install -r requirements.txt
 paso 5 
 corremos el servidor con el comando siguiente:
 
-py -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+py -m uvicorn main:app --reload --host 0.0.0.0 --port 8000 --> aqui tambien corremos la app pero se reinicia solo si nota cambios en el codigo
+
+ uvicorn main:app --host 0.0.0.0 --port 8000 ---> sirve para correr la app 

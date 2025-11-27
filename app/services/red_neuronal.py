@@ -8,8 +8,6 @@ from app.models.registro_ml import SesionDTO, HorarioItem
 
 
 
-
-
 MODEL_PATH = "data/modelo.pkl"
 
 def entrenar_modelo(csv_path: str):
@@ -65,6 +63,7 @@ def calcular_horarios(sesiones: List[SesionDTO]) -> List[HorarioItem]:
     Genera recomendaciones de horarios en base a las sesiones registradas.
     Usa la duración y el estado de ánimo como factores simples.
     """
+    print("Sesiones recibidas:", sesiones)
     horarios = []
 
     for sesion in sesiones:
