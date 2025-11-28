@@ -7,8 +7,9 @@ class SesionDTO(BaseModel):
     rutinaId: int
     duracionSegundos: int
     estadoAnimo: int
-    horaDelDia: str
+    horaDelDia: float
     fecha: str
+    
 
 class HorarioItem(BaseModel):
     hora: float
